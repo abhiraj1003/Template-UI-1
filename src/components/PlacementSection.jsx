@@ -2,12 +2,7 @@ import React from 'react';
 import { Container, Carousel, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './PlacementSection.css';
-
-
-
-
-
-
+import OurClients from './Ourclients';
 
 const placements = [
   {
@@ -112,6 +107,7 @@ const PlacementSection = () => {
           
         ))}
       </Carousel>
+      
       
     </Container>
   );

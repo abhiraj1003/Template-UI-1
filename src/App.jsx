@@ -6,7 +6,8 @@ import './App.css';
 import Marquee from './components/Marquee';
 import PlacementSection from './components/PlacementSection';
 import Keypoints from './components/Keypoints';
-import OurClients from './components/Ourclients';
+import PopCourses from './components/PopCourses';
+
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
       <HeaderCarousel />
       <Marquee />
       <Keypoints />
+      <PopCourses />
       <PlacementSection />
-      <OurClients />
+      
     </div>
   );
 }
