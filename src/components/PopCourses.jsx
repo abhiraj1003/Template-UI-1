@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import '../App.css'; // Ensure the CSS file is correctly imported
+import '../App.css'; // Ensure the CSS file is correctly imported all.
 
 const courses = [
     { id: 1, title: 'SAP Courses', description: 'Learn from certified SAP professionals.', seats: 25, image: 'src/Logos/grc img.jpg' },
