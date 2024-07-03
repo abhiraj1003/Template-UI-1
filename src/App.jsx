@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from './components/Header';
-import HeaderCarousel from './components/Homepage/HeaderCarousel';
+import Header from './components/Homepage/Header';
+import HeaderCarousel from './Pages/HeaderCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Marquee from './components/Homepage/Marquee';
-import PlacementSection from './components/Homepage/PlacementSection';
-import Keypoints from './components/Homepage/Keypoints';
-import PopCourses from './components/Homepage/PopCourses';
-import OurClients from './components/Homepage/Ourclients';
-import FeedbackAndReviews from './components/Homepage/FeedbacksandReviews';
+import Marquee from './Pages/Marquee';
+import PlacementSection from './Pages/PlacementSection';
+import Keypoints from './Pages/Keypoints';
+import PopCourses from './Pages/PopCourses';
+import OurClients from './Pages/Ourclients';
+import FeedbackAndReviews from './Pages/FeedbacksandReviews';
 
 
 function App() {
