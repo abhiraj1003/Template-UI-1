@@ -87,7 +87,7 @@ body {
 .nav .dropdown .btn-secondary {
   text-decoration: none;
   color: #ffffff;
-  background-color: #036fa5;
+  background-color: #070441;
   border-radius: 10px;
   font-size: 18px;
   line-height: 45px;
@@ -112,6 +112,10 @@ body {
 
 .nav .dropdown-menu a:hover {
   background-color: rgb(33, 68, 85);
+}
+.nav a:hover {
+  background-color: #48CAE4;
+  color: #ffffff;
 }
 
 .carousel-content {
@@ -353,9 +357,50 @@ body {
 .client-logo {
   max-height: 100px;
   object-fit: contain;
+  padding: 10px;
+}
+/* FEEDBACK SECTION  */
+
+.feedback-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  max-width: 100%;
 }
 
-.client-logo.mx-2 {
-  margin: 0 10px;
+.section-title {
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #333;
+}
+
+.feedback-card {
+  margin: 10px;
+  border: none;
+  background-color: #0d47a1;
+  color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.blockquote {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #f9f9f9;
+}
+
+.review-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.review-name {
+  font-size: 1.2em;
+  color: #29b6f6;
+}
+
+.review-rating {
+  color: #ffc107;
 }
 

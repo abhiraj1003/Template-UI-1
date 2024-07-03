@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Logos/cderplogo white bg.jpg'; 
+import logo from '.../Logos/cderplogo white bg.jpg'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../App.css';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
+import '.../App.css';
 import slideImage from '../Logos/file.png';
 import slideImage2 from '../Logos/file01.png';
 import slideImage3 from '../Logos/file02.png';
