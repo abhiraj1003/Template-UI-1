@@ -1,19 +1,18 @@
 import React from 'react';
-import logo from '.../Logos/cderplogo white bg.jpg'; 
+import logo from '/src/Logos/Navbar/cderplogo white bg.jpg'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../App.css';
+import './Navbar.css';
 
-/*jhyrtyu*/
 const Header = () => (
   <header> 
     <div className="header">
       <div className="logo">
         <img src={logo} alt="Connecting Dots ERP" />
       </div>
-      <div className="search-container">
-        <input className="main" type="text" placeholder="Search..." />
-        <span className="searchicon"></span>
+      <div className="container">  
+        <input type="text" placeholder="Search..." />
+        <div className="search"></div>
       </div>
       <div className="nav">
         <div className="dropdown">
@@ -29,11 +28,9 @@ const Header = () => (
         </div>
         <a href="#" className="btn btn-link">Blog</a>
         <a href="#" className="btn btn-link">About us</a>
-        
       </div>
-      
     </div>
   </header>
 );
 
-export default Header;
+export default Header;

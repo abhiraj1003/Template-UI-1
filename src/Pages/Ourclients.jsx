@@ -3,13 +3,13 @@ import { Container, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 
-// Paths to logos (ensure these paths are correct in your project)
-import amdocsLogo from '../Logos/amdocs.png';
-import googleLogo from '../Logos/google.png';
-import tcsLogo from '../Logos/tcs.png';
-import zensarLogo from '../Logos/zensar.png';
-import ibmLogo from '../Logos/ibm.png';
-import FeedbackAndReviews from './FeedbacksandReviews';
+
+import amdocsLogo from '../Logos/PlacementSection/amdocs.png';
+import googleLogo from '../Logos/PlacementSection/google.png';
+import tcsLogo from '../Logos/PlacementSection/tcs.png';
+import zensarLogo from '../Logos/PlacementSection/zensar.png';
+import ibmLogo from '../Logos/PlacementSection/ibm.png';
+
 
 const clients = [
   { name: 'Amdocs', logo: amdocsLogo },

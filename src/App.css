@@ -10,113 +10,6 @@ body {
   padding: 0;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.1px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 360px;
-  width: 180px;
-  margin-right: 40px;
-}
-
-.search-container {
-  position: relative;
-  margin-right: 20px;
-}
-
-.main {
-  width: 400px;
-  border: 2px solid #555bc1fa;
-  height: 30px;
-  background: #e1eaef;
-  border-radius: 50px;
-  padding-left: 35px;
-  font-size: 13px;
-  color: #555;
-  
-}
-
-.main:focus {
-  outline: none;
-}
-
-.searchicon {
-  position: absolute;
-  height: 15px;
-  width: 15px;
-  background: transparent;
-  border: 3px solid #63c2f1;
-  left: 10px;
-  top: 7px;
-  border-radius: 50%;
-}
-
-.searchicon:after {
-  content: "";
-  position: absolute;
-  background: #63c2f1;
-  height: 6px;
-  width: 3px;
-  bottom: -5px;
-  right: -3px;
-  transform: rotate(-45deg);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav .dropdown,
-.nav a {
-  margin: 0 10px;
-}
-
-.nav a,
-.nav .dropdown .btn-secondary {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #070441;
-  border-radius: 10px;
-  font-size: 18px;
-  line-height: 45px;
-  height: 35px;
-  width: 130px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.nav .dropdown-menu a {
-  color: #ffffff;
-  padding: 10px 20px;
-  background-color: #12124f;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.nav .dropdown-menu a:hover {
-  background-color: rgb(33, 68, 85);
-}
-.nav a:hover {
-  background-color: #48CAE4;
-  color: #ffffff;
-}
 
 .carousel-content {
   text-align: center;
@@ -363,8 +256,8 @@ body {
 
 .feedback-section {
   padding: 40px 0;
-  background-color: #f9f9f9;
-  max-width: 100%;
+  background-color: #fff;
+  margin-top: 400px;
 }
 
 .section-title {
@@ -373,19 +266,44 @@ body {
   color: #333;
 }
 
-.feedback-card {
+.placement-card {
   margin: 10px;
   border: none;
-  background-color: #0d47a1;
-  color: #f9f9f9;
+  background-color: #fff;
+  color: #333;
   padding: 20px;
   border-radius: 10px;
+}
+
+.student-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.company-logo {
+  width: 50px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.feedback-card {
+  border: 2px dashed #000; /* Long dashed border */
+  background-color: #ffffff;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  height: 260px;
+  margin: 10px; /* Reduced spacing between cards */
+  padding-left: 50px;
+  position: relative; /* To position the quote image */
 }
 
 .blockquote {
   font-size: 1em;
   line-height: 1.5;
-  color: #f9f9f9;
+  color: #090909;
 }
 
 .review-image {
@@ -402,5 +320,13 @@ body {
 
 .review-rating {
   color: #ffc107;
+}
+
+.quote-image {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px; /* Adjust size as necessary */
+  height: 30px; /* Adjust size as necessary */
 }
 

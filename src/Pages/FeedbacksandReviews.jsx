@@ -2,9 +2,8 @@ import React from 'react';
 import { Container, Carousel, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
+import premImage from '../Logos/FeedbacksandReviews/review image.png';
 
-// Paths to images (ensure these paths are correct in your project)
-import premImage from '../Logos/review image.png';
 
 const reviews = [
     {
@@ -14,36 +13,35 @@ const reviews = [
         image: premImage,
     },
     {
-        name: 'Prem Kumar',
+        name: 'Adish',
         review: '“As a senior engineer I have specially reviewed the System Design content and live classes of My Tutor and I found it more on the implementation side instead of theoretical concepts which helps to work in real-time environment in the organization.”',
         rating: 4,
         image: premImage,
     },
     {
-        name: 'Prem Kumar',
+        name: 'Abhiraj',
         review: '“As a senior engineer I have specially reviewed the System Design content and live classes of My Tutor and I found it more on the implementation side instead of theoretical concepts which helps to work in real-time environment in the organization.”',
         rating: 4,
         image: premImage,
     },
     {
-        name: 'Prem Kumar',
+        name: 'Aryan',
         review: '“As a senior engineer I have specially reviewed the System Design content and live classes of My Tutor and I found it more on the implementation side instead of theoretical concepts which helps to work in real-time environment in the organization.”',
         rating: 4,
         image: premImage,
     },
     {
-        name: 'Prem Kumar',
+        name: 'Dhanashree',
         review: '“As a senior engineer I have specially reviewed the System Design content and live classes of My Tutor and I found it more on the implementation side instead of theoretical concepts which helps to work in real-time environment in the organization.”',
         rating: 4,
         image: premImage,
     },
     {
-        name: 'Prem Kumar',
+        name: 'Aditi',
         review: '“As a senior engineer I have specially reviewed the System Design content and live classes of My Tutor and I found it more on the implementation side instead of theoretical concepts which helps to work in real-time environment in the organization.”',
         rating: 4,
         image: premImage,
     },
-
 ];
 
 const FeedbackAndReviews = () => {

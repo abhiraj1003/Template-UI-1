@@ -1,11 +1,11 @@
 import React from 'react';
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '.../App.css';
-import slideImage from '../Logos/file.png';
-import slideImage2 from '../Logos/file01.png';
-import slideImage3 from '../Logos/file02.png';
-import slideImage4 from '../Logos/file03.png';
+import '../App.css';
+import slideImage from '../Logos/HeaderCarousel/file.png';
+import slideImage2 from '../Logos/HeaderCarousel/file01.png';
+import slideImage3 from '../Logos/HeaderCarousel/file02.png';
+import slideImage4 from '../Logos/HeaderCarousel/file03.png';
 import CompanyLogos from './CompanyLogos';
 
 
