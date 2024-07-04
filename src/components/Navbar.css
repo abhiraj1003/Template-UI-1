@@ -18,7 +18,7 @@ body {
   padding: 10px 20px;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  height: 80px;
+  height: 70px;
   width: 100%;
   z-index: 1000;
 }
@@ -36,7 +36,7 @@ body {
 
 .gin-button {
   background-color: #009970;
-  color: #000000;
+  color: #fff;
   font-size: 14px;
   padding: 8px 20px;
   border-radius: 50px;
@@ -53,7 +53,8 @@ body {
   font-size: 1.25rem;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus,
+.btn-close:focus {
   box-shadow: none;
   outline: none;
 }
@@ -61,9 +62,12 @@ body {
 .nav-link {
   color: #666777;
   font-weight: 500;
+  font-size: 20px; /* Increased font size */
+  margin-right: 20px; /* Increased distance between links */
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: #000;
 }
 
@@ -76,13 +80,163 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    
+    background-color: #009970;
     visibility: hidden;
     transition: 0.3s ease-in-out;
   }
 
-  .nav-link:hover::before, .nav-link.active::before {
+  .nav-link:hover::before,
+  .nav-link.active::before {
     width: 100%;
     visibility: visible;
   }
+}
+
+.navbar-nav {
+  margin-left: auto; /* Align links to the right */
+}
+
+.search {
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --font-size: 1rem;
+  --color: #000000;
+  --transition-time-icon: 0.2s;
+  --transition-time-input: 0.3s 0.25s;
+  display: flex;
+  position: relative;
+  border-radius: 100px;
+  align-items: center;
+  transition: border-color var(--transition-time-icon) linear,
+    padding var(--transition-time-input) var(--easing);
+  margin-left: 450px; /* Align to the center */
+
+  &:not(:focus-within) {
+    --transition-time-input: 0.2s 0s;
+  }
+}
+
+.search__input {
+  border: none;
+  font-size: 14px;
+  opacity: 0;
+  outline: none;
+  transition: width var(--transition-time-input) var(--easing),
+    padding var(--transition-time-input) var(--easing),
+    opacity var(--transition-time-input) linear;
+  width: 0;
+  background: transparent;
+  color: var(--color-highlight);
+
+  &::placeholder {
+    color: var(--color);
+    opacity: 0.75;
+  }
+}
+
+.search__icon-container {
+  position: relative;
+  height: calc(var(--font-size) + 1.1rem);
+  width: calc(var(--font-size) + 1.1rem);
+  align-items: center;
+}
+
+.search__label,
+.search__submit {
+  color: var(--color);
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var (--color-highlight);
+  }
+}
+
+.search__label {
+  transition: transform var(--transition-time-icon) var(--easing), color 0.1s;
+}
+
+.search__submit {
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  display: none;
+  outline: none;
+  transition: color 0.1s, box-shadow 0.1s;
+
+  svg {
+    transform: scale(0.5);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px inset var(--color-highlight);
+  }
+}
+
+.search:focus-within {
+  border-color: var(--color);
+  border: 1px solid #000000;
+  border-radius: 100px;
+
+  .search__input {
+    opacity: 1;
+    padding: 0 1rem 0 2rem;
+    width: 200px;
+  }
+
+  .search__label {
+    transform: scale(0.5);
+  }
+
+  .search__submit {
+    animation: unhide var(--transition-time-icon) steps(1, end);
+    display: block;
+  }
+}
+
+@keyframes unhide {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .search {
+    margin-left: 0;
+    margin-right: auto;
+    order: 2; /* Ensure search bar is centered between logo and nav links */
+  }
+}
+
+/* Dropdown CSS */
+.dropdown-menu li {
+  position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
 }
