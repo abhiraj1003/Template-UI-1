@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Navbar';
+import Navbar from './components/Navbar';
 import HeaderCarousel from './Pages/HeaderCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -9,20 +9,16 @@ import Keypoints from './Pages/Keypoints';
 import PopCourses from './Pages/PopCourses';
 import FeedbackAndReviews from './Pages/FeedbacksandReviews';
 
-
 function App() {
   return (
     <div className="App">
-      <Marquee />
-      <Header />
+      <Navbar />
       <HeaderCarousel />
       <Marquee />
       <Keypoints />
       <PopCourses />
       <PlacementSection />
       <FeedbackAndReviews />
-      
-      
     </div>
   );
 }

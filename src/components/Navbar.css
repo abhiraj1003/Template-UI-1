@@ -18,6 +18,9 @@ body {
   padding: 10px 20px;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
+  height: 80px;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
@@ -26,179 +29,60 @@ body {
 }
 
 .logo img {
-  height: 60px; /* Adjusted for a reasonable height */
-  width: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Adjusted for better spacing */
+  max-height: 70px;
+  width: auto;
+  margin-right: 40px;
 }
 
-.container {
-  position: relative;
-  margin-right: 10px; /* Reduced margin */
-  flex-grow: 1; /* Allows it to take available space */
-}
-
-.container input {
-  font-family: 'Inconsolata', monospace;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  outline: none;
-  border: #000000;
-  background: #6c8bd4;
+.gin-button {
+  background-color: #009970;
   color: #000000;
-  padding: 0 80px 0 20px;
-  border-radius: 30px;           
-  transition: all 1s;
-  opacity: 0;
-  z-index: 5;
-  font-weight: bolder;
-  letter-spacing: 0.1em;
-}
-
-.container input:hover {
-  cursor: pointer;
-}
-
-.container input:focus {
-  width: 300px;
-  opacity: 1;
-  cursor: text;
-}
-
-.container input:focus ~ .search {
-  right: -250px;
-  background: #181877;
-  z-index: 6;
-}
-
-.container input::placeholder {
-  color: #000000;
-  opacity: 0.5;
-  font-weight: bolder;
-}
-
-.container .search {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 30px; /* Adjusted for smaller size */
-  height: 30px; /* Adjusted for smaller size */
-  background: #181877; /* Changed to dark blue */
-  border-radius: 50%;
-  transition: all 1s;
-  z-index: 4;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-}
-
-.container .search:hover {
-  cursor: pointer;
-}
-
-.container .search::before {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: 11px; /* Adjusted for smaller size */
-  right: 0;
-  bottom: 0;
-  left: 11px; /* Adjusted for smaller size */
-  width: 6px; /* Adjusted for smaller size */
-  height: 1px; /* Adjusted for smaller size */
-  background: #ffffff; /* Changed to dark blue */
-  transform: rotate(45deg);
-  transition: all 0.5s;
-}
-
-.container .search::after {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: -2.5px; /* Adjusted for smaller size */
-  right: 0;
-  bottom: 0;
-  left: -2.5px; /* Adjusted for smaller size */
-  width: 12.5px; /* Adjusted for smaller size */
-  height: 12.5px; /* Adjusted for smaller size */
-  border-radius: 50%;
-  border: 1px solid #ffffff; /* Changed to dark blue */
-  transition: all 0.5s;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap; /* Ensure items don't wrap */
-}
-
-.nav .dropdown,
-.nav a {
-  margin: 0 10px;
-}
-
-.nav a,
-.nav .dropdown .btn-secondary {
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #181877;
-  border-radius: 10px;
-  font-size: 18px;
-  line-height: 45px;
-  height: 35px;
-  width: 130px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0; /* Adjusted to align side by side */
-  margin-top: 0; /* Adjusted to align side by side */
+  transition: 0.3s background-color;
 }
 
-.nav a:hover {
-  color: #ffffff;
-  background-color: rgb(81, 169, 213);
+.gin-button:hover {
+  background-color: #00b383;
 }
 
-.nav .dropdown-menu a {
-  color: #ffffff;
-  padding: 10px 20px;
-  background-color: #131348;
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
 }
 
-.nav .dropdown-menu a:hover {
-  background-color: rgb(81, 169, 213);
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
   }
 
-  .container {
+  .nav-link:hover::before, .nav-link.active::before {
     width: 100%;
-    margin: 10px 0;
-  }
-
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .nav .dropdown,
-  .nav a {
-    margin: 5px 0;
-    width: 100%;
-    text-align: left;
-    padding-left: 20px;
+    visibility: visible;
   }
 }
