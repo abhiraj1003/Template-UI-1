@@ -33,6 +33,9 @@ body {
   width: auto;
   margin-right: 40px;
 }
+.mx-lg-2-dropdown-toggle{
+  margin-right: 1000px;
+}
 
 .gin-button {
   background-color: #009970;
@@ -93,7 +96,8 @@ body {
 }
 
 .navbar-nav {
-  margin-left: auto; /* Align links to the right */
+  margin-right: 200px; /* Align links to the right */
+  
 }
 
 .search {
@@ -226,6 +230,7 @@ body {
 /* Dropdown CSS */
 .dropdown-menu li {
   position: relative;
+  
 }
 .dropdown-menu .dropdown-submenu {
   display: none;
